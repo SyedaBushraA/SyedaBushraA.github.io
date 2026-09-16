@@ -6,7 +6,7 @@ Run `npm run build` first. Nothing here touches the network."""
 import base64, mimetypes, os, re, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-DIST = os.path.join(ROOT, "dist")
+DIST = os.path.join(ROOT, "docs")
 html = open(os.path.join(DIST, "index.html"), encoding="utf-8").read()
 
 

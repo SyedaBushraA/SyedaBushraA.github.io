@@ -3,4 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  // GitHub Pages serves the site from the docs/ folder of the main branch.
+  build: { outDir: "docs" },
 });
