@@ -107,23 +107,23 @@ export const projects = [
     poster: null,
     image: "/training.jpg",
     blurb:
-      "A staff training portal for a multi-clinic group: role-assigned courses, onboarding tracks, anti-skip video tracking and e-signed PDF certificates — the React/TypeScript front end, built solo.",
-    tech: ["React · TypeScript", "Jotai", "YouTube IFrame API", "jsPDF · html2canvas", "AWS S3", "REST APIs"],
+      "A staff training portal for a multi-clinic group: role-assigned courses, onboarding tracks, anti-skip video tracking and e-signed PDF certificates — front end and AWS back end, built solo.",
+    tech: ["React · TypeScript", "AWS CDK · Lambda", "API Gateway", "DynamoDB", "S3 · SES", "YouTube IFrame API", "jsPDF"],
     link: "https://todaysdentalinsights.com",
-    role: "Front end — sole author of the module",
+    role: "Full stack — sole author of the module",
     sections: {
       "The idea":
         "Every clinic role needs its own training, and a certificate should mean the material was actually watched. Give admins a place to publish courses and assign them by role, and give staff one place to learn, track progress and download their certificates.",
       "The challenge":
         "Video completion is easy to fake by scrubbing to the end. Courses arrive in many shapes — YouTube links, MP4s, documents, quizzes, whole HTML courses — and admins also wanted manuals, onboarding tracks, live sessions and expiry tracking, all inside one dashboard.",
       "The process":
-        "I built the module as a React/TypeScript front end over the platform's training API: a six-tab admin dashboard and an employee 'My Training' view, with a typed API layer covering 72 endpoints.",
+        "I built both halves. The back end is its own AWS CDK stack: API Gateway and Lambda services for courses, enrollments, certifications, manuals, onboarding, notifications and reminders, 17 DynamoDB tables, S3 for course files, and a daily scheduled job that emails reminders through SES. The front end is React/TypeScript: a six-tab admin dashboard and an employee 'My Training' view over a typed API layer.",
       "The solution":
         "Segment-based anti-skip tracking over the YouTube IFrame API and HTML5 video that only completes at 90% genuinely watched, with an engagement hook that pauses on idle or hidden tabs and syncs progress every 30 seconds. Sandboxed iframe HTML courses that report completion through postMessage. A touch-enabled e-signature pad that renders certificates to PDF. Manual and onboarding-track builders, course access requests, notifications, and certification-expiry monitoring.",
       "The result":
         "A complete training workflow for admins and staff — publish, assign, learn, certify, monitor — live on the group's internal platform.",
       "My contribution":
-        "The entire front end of the module; the training API itself was built by the backend team.",
+        "The whole module, end to end: the AWS back end and infrastructure, and the React/TypeScript front end.",
     },
   },
   {

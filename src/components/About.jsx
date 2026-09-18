@@ -59,7 +59,6 @@ export default function About() {
                     <div className="badge-fallback" role="img"
                       aria-label="Placeholder portrait with initials SB">
                       <b>SB</b>
-                      <span>your photo here</span>
                     </div>
                   )}
                 </div>
